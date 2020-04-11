@@ -20,7 +20,9 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <ul class="user-navigation">
-                <li class="login-link">Вход</li>
+                <li>
+                    <a href="login.html" class="login-link">Вход</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -84,7 +86,25 @@
             <p class="appointment-info">
                 Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
             </p>
-            <!-- FORM -->
+            <form action="https://echo.htmlacademy.ru" class="appointment-form" method="POST">
+               <p class="appointment-item">
+                   <label for="appointment-date"></label>
+                   <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
+                </p>
+               <p class="appointment-item">
+                   <label for="appointment-time"></label>
+                   <input id="appointment-time" type="text" name="time"  value="" placeholder="10:00">
+                </p>
+               <p class="appointment-item">
+                   <label for="appointment-name"></label>
+                   <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+                </p>
+               <p class="appointment-item">
+                   <label for="appointment-phone"></label>
+                   <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+                </p>
+                <button class="button" type="submit">Отправить</button>         
+            </form>
         </section>
     </main>
     <footer class="main-footer">
@@ -110,12 +130,31 @@
     <section class="modal modal-login">
         <h2>Личный кабинет</h2>
         <p>Введите свой логин и пароль.</p>
-        <!-- form -->
-        <button class="madal-close">x</button>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="POST" >
+            <p>
+                <label for="user-login" class="visually-hidden"></label>
+                <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+            </p>
+            <p>
+                <label for="user-password" class="visually-hidden"></label>
+                <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            </p> 
+            <p class="login-password-info">
+                <label class="login-checkbox">
+                    <input type="checkbox" name="remember" class="visually-hidden">
+                    <span class="check-indicator"></span>
+                    Запомните меня
+                </label>
+                <a href="#" class="restore">Я забыл пароль!</a>
+            </p>
+            <button class="button" type="submit">Войти</button>
+        </form>
+        <button class="madal-close" type="button">Закрыть</button>
     </section>
     <section class="modal modal-map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <button class="madal-close">x</button>
+        <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <button class="madal-close" type="button">Закрыть</button>
     </section>
 </body>
 </html>
